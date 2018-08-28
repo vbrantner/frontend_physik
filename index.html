@@ -5,32 +5,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
+
 <body>
-  <h1>Hallo</h1>
-  <div>
-    There are <span></span> reviews with an average of <span></span>
+  <div class="contrainer-fluid ">
+    <div class="row justify-content-md-center" style="background: #f5f5f5;">
+      <div class="col maxWidth">
+        <div class="col card">
+          <div class="row m-1">
+            <div class="col">
+              <h2> Infromationen zu bisherigen Feedbacks</h2>
+            </div>
+          </div>
+          <div class="row m-1">
+            <div class="col">
+              <p>Aktuell gibt es 
+                <span></span> 
+                Bewertungen. Die durchschnittliche Bewertung liegt bei 
+                <span></span>.
+              </p>
+            </div>
+          </div>
+          <div class="row m-2">
+            <div class="col example">
+                <button class="btn btn-primary" type="update">Aktualisieren</button>
+            </div>
+          </div>
+        </div>
+        <div class="row m-3">
+          <div class="col card">
+            <table id="feedbackTable" class="display">
+              <thead>
+                <tr>
+                    <th>Stars</th>
+                    <th>Feedback</th>
+                    <th>Project</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            </table>
+          </div>
+        </div>
+        <div class="row m-3">
+          <div class="col card">
+            <canvas id="myChart" style="width:30%"></canvas>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <table id="feedbackTable" class="display" style="width:40%">
-    <thead>
-      <tr>
-          <th>Stars</th>
-          <th>Feedback</th>
-          <th>Project</th>
-          <th>Date</th>
-      </tr>
-  </thead>
-  </table>
-  <div style="width:40%">
-  <canvas id="myChart" style="width:30%"></canvas>
-  </div>
-
-
-  <button type="button" class="btn btn-primary">Primary</button>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
