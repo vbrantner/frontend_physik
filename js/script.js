@@ -36,8 +36,6 @@ $(document).ready(() => {
       const starsData = [];
       const dateData = [];
 
-      const datum = feedbackData[0].date;
-
       for (let i = 0; i < feedbackData.length; i++) {
         sumReview += feedbackData[i].stars;
         starsData.push(feedbackData[i].stars);
