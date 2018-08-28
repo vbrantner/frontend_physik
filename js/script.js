@@ -19,7 +19,8 @@ function dateAggregation(arr) {
 }
 
 $(document).ready(() => {
-  $('button').click(() => {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  function init() {
     $.ajax({
       url: 'http://proxy.hackeryou.com',
       dataType: 'json',
@@ -38,7 +39,6 @@ $(document).ready(() => {
 
       for (let i = 0; i < feedbackData.length; i++) {
         sumReview += feedbackData[i].stars;
-        starsData.push(feedbackData[i].stars);
         dateData.push(feedbackData[i].date.slice(0, 10));
       }
 
@@ -51,7 +51,10 @@ $(document).ready(() => {
       $('span:last').text($('div').data('test').last);
 
       $('#feedbackTable').DataTable({
+        destroy: true,
         data: feedbackData,
+        paging: false,
+        searching: false,
         columns: [
           { data: 'stars' },
           { data: 'feedback' },
@@ -59,8 +62,6 @@ $(document).ready(() => {
           { data: 'date' },
         ],
       });
-
-      const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -84,5 +85,26 @@ $(document).ready(() => {
         },
       });
     });
+  }
+  init();
+
+  $('button').click(function (event) {
+    init();
+    if ($(this).hasClass('updated')) {
+      event.preventDefault();
+      return;
+    }
+    $(this).addClass('updated');
+    $(this).html('loading...');
+
+    setTimeout(goback, 1000);
+  });
+  function goback() {
+    $('button').removeClass('updated').html('Aktualisieren');
+  }
+  $('button').mousedown(function () {
+    if ($(this).hasClass('updated')) $(this).addClass('error');
+  }).mouseup(function () {
+    $(this).removeClass('error');
   });
 });
