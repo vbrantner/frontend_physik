@@ -1,0 +1,26 @@
+{
+  "name": "frontend_physik",
+  "version": "1.0.0",
+  "description": "Einfache Webseite zur Darstellung der Bewertungsergebnisse. Die Daten werden von einer API abgerufen und verarbeitet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbrantner/frontend_physik.git"
+  },
+  "author": "Vinzenz Brantner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbrantner/frontend_physik/issues"
+  },
+  "homepage": "https://github.com/vbrantner/frontend_physik#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {}
+}
