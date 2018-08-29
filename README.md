@@ -18,5 +18,5 @@ und ein Graph zur Darstellungen der Anzahl der Bewertungen pro Tag.
 - Server starten mit 'http-server' (localhost:8080)
 
 ## Acknowledgments
-Um ein Ajax CORS Request zu verarbeiten wurde ein Proxy benutzt. (https://github.com/HackerYou/json-proxy)
+Um eine Ajax CORS Anfrage zu verarbeiten wird die Anfrage über ein ein Proxy geleitet. (https://github.com/HackerYou/json-proxy)
 
