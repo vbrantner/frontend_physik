@@ -12,8 +12,11 @@ und ein Graph zur Darstellungen der Anzahl der Bewertungen pro Tag.
 - [jquery datatables](https://datatables.net/)
 - [Chart.js](https://www.chartjs.org/)
 
-## Installation
+## Installation/Initialisierung
 - git clone dieses repository
 - npm init
-- Server starten mit 'http-server'
+- Server starten mit 'http-server' (localhost:8080)
+
+## Acknowledgments
+Um ein Ajax CORS Request zu verarbeiten wurde ein Proxy benutzt. (https://github.com/HackerYou/json-proxy)
 
